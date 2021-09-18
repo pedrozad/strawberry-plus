@@ -12,7 +12,8 @@ Strawberry-Plus is a LOW-CODE metaheuristic algorithms tool, developed as an add
 
 1. Download or clone this repository
 
-2. cd strawberryPlus
+2. 
+   `cd strawberryPlus`
 
 3. 
    - If you would like to use this add-on, please install it by using 
