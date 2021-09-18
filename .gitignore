@@ -1,4 +1,11 @@
+
+# Compilation files
 *.pyc
 
-*.egg_info
+# Installation files
+*.egg-info
+
+# Environment
 .env
+.venv
+venv
