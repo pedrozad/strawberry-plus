@@ -10,7 +10,7 @@ class IntNumber(OWWidget):
 
     # An icon resource file path for this widget
     # (a path relative to the module where this widget is defined)
-    icon = "icons/number.svg"
+    icon = "icons/input.svg"
 
     want_main_area = False
     
@@ -22,6 +22,8 @@ class IntNumber(OWWidget):
     def __init__(self):
         super().__init__()
 
+        self.setFixedHeight(150)
+        
         from AnyQt.QtGui import QIntValidator
         gui.lineEdit(self.controlArea, self, "number", "Enter a number",
                     box="Number",

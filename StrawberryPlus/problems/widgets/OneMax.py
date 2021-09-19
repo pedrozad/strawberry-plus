@@ -14,7 +14,7 @@ from jmetal.problem import OneMax
 class OneMax_SingleObjetive(widget.OWWidget):
     name = "OneMax - Single-Objective - Problem"
     description = "Randomly selects a subset of instances from the data set"
-    icon = "icons/mywidget.svg"
+    icon = "icons/onemax.svg"
     priority = 10
 
     class Inputs:
@@ -33,7 +33,9 @@ class OneMax_SingleObjetive(widget.OWWidget):
         # Problem
         self.problem = None
 
-        self.optionsBox = gui.widgetBox(self.controlArea, "One Max Problem")
+        self.setFixedHeight(150)
+
+        self.optionsBox = gui.label(self.controlArea, self, "One Max Problem")
         
         self.label = gui.widgetLabel(self.controlArea, "The number is: ??")
         # Box to click the botton

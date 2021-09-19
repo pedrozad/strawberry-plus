@@ -12,18 +12,19 @@ from AnyQt.QtGui import QIntValidator
 # from JMetalpy
 from jmetal.algorithm.singleobjective.local_search import LocalSearch
 from jmetal.operator import BitFlipMutation
+from jmetal.operator import PolynomialMutation
 from jmetal.problem import OneMax
 from jmetal.util.solution import print_function_values_to_file, print_variables_to_file
 from jmetal.util.termination_criterion import StoppingByEvaluations
-from jmetal.core.problem import Problem
+from jmetal.core.problem import Problem, BinaryProblem
 
 class LocalSearch_widget(widget.OWWidget):
     name = "Local Search"
     description = "Local Search, expects a problem (Single Objective) and an Integer (Max Evaluation)"
-    icon = "icons/sword.svg"
+    icon = "icons/local-search.svg"
     priority = 10
 
-    problem = OneMax(number_of_bits=0)
+    #problem = OneMax(number_of_bits=0)
     max_evaluations = int()
     problem = None
     
@@ -41,12 +42,15 @@ class LocalSearch_widget(widget.OWWidget):
     def __init__(self):
         super().__init__()
         self.problem = None
+
+        self.setFixedHeight(240)
         self.label1 = gui.widgetLabel(self.controlArea, "Please attach a Problem to the Input")
 
         gui.lineEdit(self.controlArea, self, "max_evaluations", "Enter the Max Evaluations quantity",
             box="Max Evaluations Quantity",
             callback=None,
             valueType=int, validator=QIntValidator())
+        
 
         # Box to click the botton
         self.optionsBox = gui.widgetBox(self.controlArea, "Options")
@@ -58,7 +62,7 @@ class LocalSearch_widget(widget.OWWidget):
         """Set the input number."""
         self.problem = problem
         if self.problem is not None:
-            self.label1.setText('')
+            self.label1.setText('Problem: ' + self.problem.get_name())
             if self.problem is not None and self.max_evaluations is not None:
                 self.b.setEnabled(True)
         else:
@@ -68,17 +72,26 @@ class LocalSearch_widget(widget.OWWidget):
     def run(self):
         if self.problem is not None and self.max_evaluations is not None:
             print('\nMax Evaluation: ' + str(self.max_evaluations))
-            algorithm = LocalSearch(
-                problem=self.problem,
-                mutation=BitFlipMutation(probability=1.0 / self.problem.number_of_bits),
-                termination_criterion=StoppingByEvaluations(max_evaluations=self.max_evaluations)
-            )
-            print("\n**************\n Ya declaré")
-            algorithm.run()
-            print("\n**************\n Ya Ejecuté")
-            self.Outputs.solution.send('Solution: ' + algorithm.get_result().get_binary_string())
-            self.Outputs.computing_time.send('Computing time: ' + str(algorithm.total_computing_time))
-            self.Outputs.fitness.send('Fitness:  ' + str(algorithm.get_result().objectives[0]))
+            if isinstance(self.problem, BinaryProblem):
+                algorithm = LocalSearch(
+                    problem=self.problem,
+                    mutation=BitFlipMutation(probability=1.0 / self.problem.number_of_bits),
+                    termination_criterion=StoppingByEvaluations(max_evaluations=self.max_evaluations)
+                )
+                algorithm.run()
+                self.Outputs.solution.send('Solution: ' + algorithm.get_result().get_binary_string())
+                self.Outputs.computing_time.send('Computing time: ' + str(algorithm.total_computing_time))
+                self.Outputs.fitness.send('Fitness:  ' + str(algorithm.get_result().objectives[0]))
+            else:
+                algorithm = LocalSearch(
+                    problem=self.problem,
+                    mutation=PolynomialMutation(1.0 / self.problem.number_of_variables, distribution_index=20.0),
+                    termination_criterion=StoppingByEvaluations(max_evaluations=self.max_evaluations)
+                )
+                algorithm.run()
+                self.Outputs.solution.send('Solution: ' + str(algorithm.get_result().variables))
+                self.Outputs.computing_time.send('Computing time: ' + str(algorithm.total_computing_time))
+                self.Outputs.fitness.send('Fitness:  ' + str(algorithm.get_result().objectives[0]))
         else:
             self.Outputs.solution.send(None)
             self.Outputs.computing_time.send(None)

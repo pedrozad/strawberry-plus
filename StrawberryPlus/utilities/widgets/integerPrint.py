@@ -4,7 +4,7 @@ from Orange.widgets import gui
 class Print(OWWidget):
     name = "Print (Number)"
     description = "Prints out a number"
-    icon = "icons/print.svg"
+    icon = "icons/output.svg"
 
     class Inputs:
         number = Input("Number", int)

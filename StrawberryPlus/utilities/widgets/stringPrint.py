@@ -4,7 +4,7 @@ from Orange.widgets import gui
 class PrintResults(OWWidget):
     name = "Print (String)"
     description = "Prints out a String"
-    icon = "icons/print.svg"
+    icon = "icons/output.svg"
 
     class Inputs:
         result = Input("String", str)

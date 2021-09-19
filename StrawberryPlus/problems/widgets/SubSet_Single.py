@@ -14,7 +14,7 @@ class SubSet_SingleObjetive(widget.OWWidget):
     description = """Given an integer array A  of size N. 
     You are also given an integer B, you need to find whether their exist a subset in A whose sum equal B.
     If there exist a subset then return 1 else return 0."""
-    icon = "icons/mywidget.svg"
+    icon = "icons/subset.svg"
     priority = 10
 
     class Inputs:
@@ -36,10 +36,13 @@ class SubSet_SingleObjetive(widget.OWWidget):
         # Problem
         self.problem = None
 
+        self.setMaximumWidth(600)
+        self.setFixedHeight(300)
+
         self.optionsBox = gui.widgetBox(self.controlArea, "Subset Sum Problem")
         
-        self.label = gui.widgetLabel(self.controlArea, "The number is: ??")
-        self.label_list = gui.widgetLabel(self.controlArea, "List is: ??")
+        self.label = gui.widgetLabel(self.optionsBox, "The number is: ??")
+        self.label_list = gui.widgetLabel(self.optionsBox, "List is: ??")
         # Box to click the botton
         # from AnyQt.QtGui import QIntValidator
         # gui.lineEdit(self.controlArea, self, "One Max Problem", "Enter the number of bits",
