@@ -29,4 +29,6 @@ Strawberry-Plus is a LOW-CODE metaheuristic algorithms tool, developed as an add
 
 Remember always to use a virtual environment, especially if you are using Linux. 
 
-These instructions were tested in Linux(Ubuntu 16.04) and in Windows 10 (64bits) with Python 3.9
+These instructions were tested in Linux(Ubuntu 16.04) and in Windows 10 (64bits) with Python 3.9.
+
+It used the Orange3-add-on example. More details in https://github.com/biolab/orange3-example-addon
