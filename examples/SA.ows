@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Print (String)" qualified_name="StrawberryPlus.utilities.widgets.stringPrint.PrintResults" project_name="Strawberry-Plus" version="" title="Print (String)" position="(750, 450)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(256.0, 308.0)" />
+		<node id="2" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(106.0, 308.0)" />
+		<node id="3" name="SubSet Single-Objective - Problem" qualified_name="StrawberryPlus.problems.widgets.SubSet_Single.SubSet_SingleObjetive" project_name="Strawberry-Plus" version="" title="SubSet Single-Objective - Problem" position="(450, 300)" />
+		<node id="4" name="Input an integer Number" qualified_name="StrawberryPlus.utilities.widgets.integerInput.IntNumber" project_name="Strawberry-Plus" version="" title="Input an integer Number" position="(300, 150)" />
+		<node id="5" name="Print (String)" qualified_name="StrawberryPlus.utilities.widgets.stringPrint.PrintResults" project_name="Strawberry-Plus" version="" title="Print (String) (1)" position="(750, 300)" />
+		<node id="6" name="Print (String)" qualified_name="StrawberryPlus.utilities.widgets.stringPrint.PrintResults" project_name="Strawberry-Plus" version="" title="Print (String) (2)" position="(750, 150)" />
+		<node id="7" name="Simulated Annealing_SA" qualified_name="StrawberryPlus.metaheuristics.widgets.SA.SimulatedAnneling" project_name="Strawberry-Plus" version="" title="Simulated Annealing_SA" position="(600, 300)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="2" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="4" sink_node_id="3" source_channel="Number" sink_channel="Sum to find" enabled="true" />
+		<link id="2" source_node_id="1" sink_node_id="3" source_channel="Selected Data" sink_channel="Data Table with the data" enabled="true" />
+		<link id="3" source_node_id="7" sink_node_id="6" source_channel="Computing Time" sink_channel="String" enabled="true" />
+		<link id="4" source_node_id="7" sink_node_id="5" source_channel="Fitness" sink_channel="String" enabled="true" />
+		<link id="5" source_node_id="7" sink_node_id="0" source_channel="Solution" sink_channel="String" enabled="true" />
+		<link id="6" source_node_id="3" sink_node_id="7" source_channel="Problem" sink_channel="Problem Unconstrained" enabled="true" />
+	</links>
+	<annotations>
+		<text id="0" type="text/plain" rect="(319.0, 33.0, 379.0, 58.0)" font-family="Ubuntu" font-size="16">Simulated Annealing of a SubSet Single-Objective problem</text>
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03$\x00\x00\x01]\x00\x00\x05y\x00\x00\x01\xfb\x00\x00\x03$\x00\x00\x01y\x00\x00\x05y\x00\x00\x01\xfb\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x03$\x00\x00\x01y\x00\x00\x05y\x00\x00\x01\xfb', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xd2\x00\x00\x01\xa6\x00\x00\x02\x92\x00\x00\x03\xb5\x00\x00\x00\xd2\x00\x00\x01\xc2\x00\x00\x02\x92\x00\x00\x03\xb5\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x00\xd2\x00\x00\x01\xc2\x00\x00\x02\x92\x00\x00\x03\xb5', 'select_rows': True, 'selected_cols': [0], 'selected_rows': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="2" format="pickle">gASV9wcAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwuL2hvbWUvcGVkcm96YWQvRG9jdW1lbnRvcy9MaXN0YSBkZSBwcnVlYmEyLmNzdpSMBnBy
+ZWZpeJSMB2Jhc2VkaXKUjAdyZWxwYXRolIwUTGlzdGEgZGUgcHJ1ZWJhMi5jc3aUjAV0aXRsZZSM
+AJSMBXNoZWV0lGgQjAtmaWxlX2Zvcm1hdJROdWJoBimBlH2UKGgJjHYvaG9tZS9wZWRyb3phZC9F
+c2NyaXRvcmlvL0Rlc2Fycm9sbG8vZnJvbUdJVC9zdHJhd2JlcnJ5LXBsdXMvdmVudi9saWIvcHl0
+aG9uMy45L3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2lyaXMudGFilGgLjA9zYW1wbGUt
+ZGF0YXNldHOUaA2MCGlyaXMudGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjHkvaG9tZS9wZWRy
+b3phZC9Fc2NyaXRvcmlvL0Rlc2Fycm9sbG8vZnJvbUdJVC9zdHJhd2JlcnJ5LXBsdXMvdmVudi9s
+aWIvcHl0aG9uMy45L3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL3RpdGFuaWMudGFilGgL
+aBZoDYwLdGl0YW5pYy50YWKUaA9oEGgRaBBoEk51YmgGKYGUfZQoaAmMeS9ob21lL3BlZHJvemFk
+L0VzY3JpdG9yaW8vRGVzYXJyb2xsby9mcm9tR0lUL3N0cmF3YmVycnktcGx1cy92ZW52L2xpYi9w
+eXRob24zLjkvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvaG91c2luZy50YWKUaAtoFmgN
+jAtob3VzaW5nLnRhYpRoD2gQaBFoEGgSTnViaAYpgZR9lChoCYx/L2hvbWUvcGVkcm96YWQvRXNj
+cml0b3Jpby9EZXNhcnJvbGxvL2Zyb21HSVQvc3RyYXdiZXJyeS1wbHVzL3ZlbnYvbGliL3B5dGhv
+bjMuOS9zaXRlLXBhY2thZ2VzL09yYW5nZS9kYXRhc2V0cy9oZWFydF9kaXNlYXNlLnRhYpRoC2gW
+aA2MEWhlYXJ0X2Rpc2Vhc2UudGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjIAvaG9tZS9wZWRy
+b3phZC9Fc2NyaXRvcmlvL0Rlc2Fycm9sbG8vZnJvbUdJVC9zdHJhd2JlcnJ5LXBsdXMvdmVudi9s
+aWIvcHl0aG9uMy45L3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2Jyb3duLXNlbGVjdGVk
+LnRhYpRoC2gWaA2MEmJyb3duLXNlbGVjdGVkLnRhYpRoD2gQaBFoEGgSTnViaAYpgZR9lChoCYx1
+L2hvbWUvcGVkcm96YWQvRXNjcml0b3Jpby9EZXNhcnJvbGxvL2Zyb21HSVQvc3RyYXdiZXJyeS1w
+bHVzL3ZlbnYvbGliL3B5dGhvbjMuOS9zaXRlLXBhY2thZ2VzL09yYW5nZS9kYXRhc2V0cy96b28u
+dGFilGgLaBZoDYwHem9vLnRhYpRoD2gQaBFoEGgSTnViZYwLcmVjZW50X3VybHOUXZSME3NhdmVk
+V2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAGAAAAA0AAACBgAAAnQAAABgAAAAUAAAAgYAAAJ0
+AAAAAAAAAAAGQAAAAGAAAABQAAACBgAAAnSUjAtzaGVldF9uYW1lc5R9lIwGc291cmNllEsAjAN1
+cmyUaBCMDWRvbWFpbl9lZGl0b3KUfZSMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdz
+lF2UKIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2U
+KIwJdmFyaWFibGVzlF2UaDR9lGhAXZRdlCiMCUZlYXR1cmUgMZSMFE9yYW5nZS5kYXRhLnZhcmlh
+YmxllIwSQ29udGludW91c1ZhcmlhYmxllJOUSwBoEIhlYXNoNksBdYwKYXR0cmlidXRlc5RoRUsC
+hpSFlIwFbWV0YXOUKYwKY2xhc3NfdmFyc5QpjBJtb2RpZmllZF92YXJpYWJsZXOUXZR1Ymg7KYGU
+fZQoaD59lCiMCXZhcmlhYmxlc5RdlIwNZG9tYWluX2VkaXRvcpR9lGhTXZQoXZQojAxzZXBhbCBs
+ZW5ndGiUaEhLAGgQiGVdlCiMC3NlcGFsIHdpZHRolGhISwBoEIhlXZQojAxwZXRhbCBsZW5ndGiU
+aEhLAGgQiGVdlCiMC3BldGFsIHdpZHRolGhISwBoEIhlXZQojARpcmlzlGhGjBBEaXNjcmV0ZVZh
+cmlhYmxllJOUSwGMLElyaXMtc2V0b3NhLCBJcmlzLXZlcnNpY29sb3IsIElyaXMtdmlyZ2luaWNh
+lIllZXNoNksBdWhJKGhZSwKGlGhbSwKGlGhdSwKGlGhfSwKGlHSUaEwpaE1oYV2UKIwLSXJpcy1z
+ZXRvc2GUjA9JcmlzLXZlcnNpY29sb3KUjA5JcmlzLXZpcmdpbmljYZRlhpSFlGhOXZR1YmV1Lg==
+</properties>
+		<properties node_id="3" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x9b\x00\x00\x02\x17\x00\x00\x057\x00\x00\x03^\x00\x00\x02\x9b\x00\x00\x023\x00\x00\x057\x00\x00\x03^\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x02\x9b\x00\x00\x023\x00\x00\x057\x00\x00\x03^', '__version__': 1}</properties>
+		<properties node_id="4" format="literal">{'controlAreaVisible': True, 'number': 10000, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xf7\x00\x00\x003\x00\x00\x02\x8c\x00\x00\x00\xe4\x00\x00\x01\xf7\x00\x00\x00O\x00\x00\x02\x8c\x00\x00\x00\xe4\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x01\xf7\x00\x00\x00O\x00\x00\x02\x8c\x00\x00\x00\xe4', '__version__': 1}</properties>
+		<properties node_id="5" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\xf5\x00\x00\x00\xd4\x00\x00\x066\x00\x00\x01H\x00\x00\x04\xf5\x00\x00\x00\xf0\x00\x00\x066\x00\x00\x01H\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x04\xf5\x00\x00\x00\xf0\x00\x00\x066\x00\x00\x01H', '__version__': 1}</properties>
+		<properties node_id="6" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\xf5\x00\x00\x00R\x00\x00\x065\x00\x00\x00\xc8\x00\x00\x04\xf5\x00\x00\x00n\x00\x00\x065\x00\x00\x00\xc8\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x04\xf5\x00\x00\x00n\x00\x00\x065\x00\x00\x00\xc8', '__version__': 1}</properties>
+		<properties node_id="7" format="literal">{'controlAreaVisible': True, 'max_evaluations': 500, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xcd\x00\x00\x01\xab\x00\x00\x04\xd5\x00\x00\x02\xb6\x00\x00\x03\xcd\x00\x00\x01\xc7\x00\x00\x04\xd5\x00\x00\x02\xb6\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x03\xcd\x00\x00\x01\xc7\x00\x00\x04\xd5\x00\x00\x02\xb6', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Local Search" qualified_name="StrawberryPlus.metaheuristics.widgets.localsearch_.LocalSearch_widget" project_name="Strawberry-Plus" version="" title="Local Search" position="(453.0, 247.0)" />
+		<node id="1" name="Input an integer Number" qualified_name="StrawberryPlus.utilities.widgets.integerInput.IntNumber" project_name="Strawberry-Plus" version="" title="Input an integer Number" position="(129.0, 246.0)" />
+		<node id="2" name="Print (String)" qualified_name="StrawberryPlus.utilities.widgets.stringPrint.PrintResults" project_name="Strawberry-Plus" version="" title="Print (String)" position="(635.0, 352.0)" />
+		<node id="3" name="OneMax - Single-Objective - Problem" qualified_name="StrawberryPlus.problems.widgets.OneMax.OneMax_SingleObjetive" project_name="Strawberry-Plus" version="" title="OneMax - Single-Objective - Problem" position="(270.0, 246.0)" />
+		<node id="4" name="Print (String)" qualified_name="StrawberryPlus.utilities.widgets.stringPrint.PrintResults" project_name="Strawberry-Plus" version="" title="Print (String) (1)" position="(630.0, 228.0)" />
+		<node id="5" name="Print (String)" qualified_name="StrawberryPlus.utilities.widgets.stringPrint.PrintResults" project_name="Strawberry-Plus" version="" title="Print (String) (2)" position="(620.0, 114.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="2" source_channel="Solution" sink_channel="String" enabled="true" />
+		<link id="1" source_node_id="1" sink_node_id="3" source_channel="Number" sink_channel="number_of_bits" enabled="true" />
+		<link id="2" source_node_id="3" sink_node_id="0" source_channel="Problem" sink_channel="Problem Unconstrained (Single Objective)" enabled="true" />
+		<link id="3" source_node_id="0" sink_node_id="5" source_channel="Computing Time" sink_channel="String" enabled="true" />
+		<link id="4" source_node_id="0" sink_node_id="4" source_channel="Fitness" sink_channel="String" enabled="true" />
+	</links>
+	<annotations>
+		<text id="0" type="text/plain" rect="(142.0, 12.0, 610.0, 72.0)" font-family="Ubuntu" font-size="16">Local Search Algorithm with OneMax Single-Objective Problem</text>
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'controlAreaVisible': True, 'max_evaluations': 100, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02|\x00\x00\x01v\x00\x00\x03\x84\x00\x00\x02\x81\x00\x00\x02|\x00\x00\x01\x92\x00\x00\x03\x84\x00\x00\x02\x81\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x02|\x00\x00\x01\x92\x00\x00\x03\x84\x00\x00\x02\x81', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'controlAreaVisible': True, 'number': 20, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02 \x00\x00\x02\xd2\x00\x00\x02\xe7\x00\x00\x03\x83\x00\x00\x02 \x00\x00\x02\xee\x00\x00\x02\xe7\x00\x00\x03\x83\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x02 \x00\x00\x02\xee\x00\x00\x02\xe7\x00\x00\x03\x83', '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04H\x00\x00\x01\xeb\x00\x00\x06\x90\x00\x00\x02\xc7\x00\x00\x04H\x00\x00\x02\x07\x00\x00\x06\x90\x00\x00\x02\xc7\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x04H\x00\x00\x02\x07\x00\x00\x06\x90\x00\x00\x02\xc7', '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02&gt;\x00\x00\x01i\x00\x00\x02\xf5\x00\x00\x02\x1a\x00\x00\x02&gt;\x00\x00\x01\x85\x00\x00\x02\xf5\x00\x00\x02\x1a\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x02&gt;\x00\x00\x01\x85\x00\x00\x02\xf5\x00\x00\x02\x1a', '__version__': 1}</properties>
+		<properties node_id="4" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\x0b\x00\x00\x01\xd8\x00\x00\x06!\x00\x00\x02\xa6\x00\x00\x04\x0b\x00\x00\x01\xf4\x00\x00\x06!\x00\x00\x02\xa6\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x04\x0b\x00\x00\x01\xf4\x00\x00\x06!\x00\x00\x02\xa6', '__version__': 1}</properties>
+		<properties node_id="5" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\x0b\x00\x00\x01\xd8\x00\x00\x06!\x00\x00\x02\xa6\x00\x00\x04\x0b\x00\x00\x01\xf4\x00\x00\x06!\x00\x00\x02\xa6\x00\x00\x00\x00\x00\x00\x00\x00\x06@\x00\x00\x04\x0b\x00\x00\x01\xf4\x00\x00\x06!\x00\x00\x02\xa6', '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
